@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <!-- No <head> do seu index.html -->
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png">
+
+<!-- Substitua todos os caminhos por relativos -->
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js')  // Caminho relativo
+    .then(reg => console.log('SW registrado'))
+    .catch(err => console.log('Erro:', err));
+}
+</script>
   <!-- Adicione ANTES do <title> -->
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#ff0000">
